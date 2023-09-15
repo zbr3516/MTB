@@ -1,4 +1,11 @@
 /********** Template CSS **********/
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+    overflow-x: hidden;
+}
 :root {
     --primary: #2124B1;
     --secondary: #4777F5;
@@ -45,9 +52,11 @@ h6,
 
 
 /*** Button ***/
+
 .btn {
     font-weight: 500;
     transition: .5s;
+
 }
 
 .btn-square {
@@ -569,4 +578,73 @@ h6,
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+img{
+  height:150px;
+  width:100%;
+}
+
+div [class^="col-"]{
+  padding-left:5px;
+  padding-right:5px;
+}
+.card{
+  transition:0.5s;
+  cursor:pointer;
+}
+.card-title{  
+  font-size:15px;
+  transition:1s;
+  cursor:pointer;
+}
+.card-title i{  
+  font-size:15px;
+  transition:1s;
+  cursor:pointer;
+  color:#ffa710
+}
+.card-title i:hover{
+  transform: scale(1.25) rotate(100deg); 
+  color:#18d4ca;
+  
+}
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+.card-text{
+  height:80px;  
+}
+
+.card::before, .card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform .3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: '';
+  pointer-events: none;
+}
+.card::before {
+  transform-origin: left top;
+}
+.card::after {
+  transform-origin: right bottom;
+}
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+  transform: scale3d(1, 1, 1);
+}
+.ico{
+    width: 100px;
+    height: auto;
+    display: flex;
+    justify-content: center
+    
+}
+.colr {
+    color: #F7FAFF;
 }
